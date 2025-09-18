@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Test {
     public static void main(String[] args) {
         MyCircularLinkedList<Integer> myList = new MyCircularLinkedList<>();
@@ -5,7 +7,7 @@ public class Test {
         myList.addToFront(30);
         myList.addToEnd(40);
         System.out.println(myList.contains(20));
-        System.out.println(myList.toArray());
+        System.out.println(Arrays.toString(myList.toArray()));
         //try {
         //    myList.removeFromFront();
         //} catch (NullPointerException e) {

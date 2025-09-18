@@ -88,8 +88,20 @@ public class MyCircularLinkedList<T> {
         }
         return false;
     }
+    
+    @SuppressWarnings("unchecked")
     public T[] toArray() {
-        
+        if (size == 0) {
+            return (T[]) new Object[0];
+        }
+        T[] array = (T[]) new Object[size];
+        MyListNode<T> current = head;
+
+        for (int i = 0; i < size; i++) {
+            array[i] = current.getData();
+            current = current.getNext();
+        }
+        return array;
     }
 
     public int size() {
