@@ -88,7 +88,7 @@ public class MyCircularLinkedList<T> {
         }
         return false;
     }
-    
+
     @SuppressWarnings("unchecked")
     public T[] toArray() {
         if (size == 0) {
